@@ -1,0 +1,20 @@
+{
+  "name": "test-proj",
+  "version": "1.0.0",
+  "description": "My First App",
+  "homepage": "https://github.com/danielchristian2882-source/Test-Proj#readme",
+  "bugs": {
+    "url": "https://github.com/danielchristian2882-source/Test-Proj/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielchristian2882-source/Test-Proj.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
