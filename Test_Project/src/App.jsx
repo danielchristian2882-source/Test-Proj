@@ -1,38 +1,56 @@
-import { useState } from 'react'
-import React from "https://esm.sh/react"
-import ReactDom from "https://esm.sh/react-dom/client"
 import './App.css'
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import LoginForm from './LoginForm.jsx';
 
-function MyHeader(){
-  return(
+function MyHeader() {
+  const navigate = useNavigate(); // ✅ works now because Router wraps App
+  return (
     <header>
       <h1>My Header</h1>
+      <button className="B1" onClick={() => navigate("/login")}>
+        Login
+      </button>
     </header>
-  )
+  );
 }
-function Body(){
-  return(
+
+function Body() {
+  return (
     <main>
-      <p>This is the body of the page.</p>
+      <p>My Body</p>
+      <button className="B1">Reset</button>
+      <button className="B2">Build</button>
     </main>
-  )
+  );
 }
-function Footer(){
-  return(
+
+function Footer() {
+  return (
     <footer>
       <p>My Footer</p>
     </footer>
-  )
+  );
 }
 
-function App() {
+function HomePage() {
   return (
     <div className="App">
       <MyHeader />
       <Body />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginForm />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
