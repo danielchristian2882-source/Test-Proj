@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 import LoginForm from './LoginForm.jsx';
 
 function MyHeader() {
-  const navigate = useNavigate(); // ✅ works now because Router wraps App
+  const navigate = useNavigate();
   return (
     <header>
       <h1>My Header</h1>
